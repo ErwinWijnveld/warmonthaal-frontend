@@ -1,4 +1,6 @@
+import FeaturedBlogs from '../FeaturedBlogs/FeaturedBlogs';
 import HeroBig from '../HeroBig/HeroBig';
+import TextImage from '../TextImage/TextImage';
 import TextUsps from '../TextUsps/TextUsps';
 import Wysiwyg from '../Wysiwyg/Wysiwyg';
 
@@ -13,6 +15,14 @@ const Blocks = ({ blocks }: any) => {
 
 			case 'text-usps':
 				blocksArray.push(<TextUsps key={index} {...block} />);
+				break;
+
+			case 'text-image':
+				blocksArray.push(<TextImage key={index} {...block} />);
+				break;
+
+			case 'featured-blogs':
+				blocksArray.push(<FeaturedBlogs key={index} {...block} />);
 				break;
 
 			default:

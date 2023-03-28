@@ -52,3 +52,19 @@ p {
 #block-builder {
     display: none;
 }
+
+.text {
+    @apply text-medium-blue font-medium;
+}
+
+.ql-align-center {
+    text-align: center;
+}
+
+.ql-align-right {
+    text-align: right;
+}
+
+.ql-align-justify {
+    text-align: justify;
+}

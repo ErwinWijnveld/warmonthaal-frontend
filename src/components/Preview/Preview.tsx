@@ -7,6 +7,7 @@ const Preview = ({ page, getPreview, setData }: any) => {
 		if (!page) {
 			const urlParams = new URLSearchParams(window.location.search);
 			const previewToken = urlParams.get('preview_token');
+			console.log(previewToken);
 			if (previewToken) {
 				setLoading(true);
 				const setPreview = async () => {

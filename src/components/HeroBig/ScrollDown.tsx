@@ -1,6 +1,10 @@
+import { OPACITY } from '@/lib/animations';
+import { motion } from 'framer-motion';
+
 const ScrollDown = ({ ...rest }: any) => {
 	return (
-		<a
+		<motion.a
+			variants={OPACITY}
 			{...rest}
 			className="absolute bottom-0 left-1/2 hidden -translate-x-1/2 translate-y-1/2 md:block"
 		>
@@ -52,7 +56,7 @@ const ScrollDown = ({ ...rest }: any) => {
 					/>
 				</g>
 			</svg>
-		</a>
+		</motion.a>
 	);
 };
 export default ScrollDown;

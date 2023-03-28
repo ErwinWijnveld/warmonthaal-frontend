@@ -6,3 +6,4 @@ export const COLORS = {
     'light-sand': '#FCF1E7',
     'ligter-sand': '#FFFCF7',
 }
+export const EASE = [0.97, 0.01, 0.36, 0.99];

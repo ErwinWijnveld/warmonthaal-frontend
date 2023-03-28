@@ -1,3 +1,5 @@
+import { OPACITY } from '@/lib/animations';
+import { motion } from 'framer-motion';
 import Image from '../presets/Image';
 import Link from '../presets/Link';
 
@@ -13,15 +15,16 @@ const ImageButton = ({ image, link, reverse, ...rest }: any) => {
 	return (
 		<>
 			{link?.url && (
-				<Link
-					href={link.url}
+				<motion.div
+					variants={OPACITY}
 					{...rest}
 					className={
 						'flex aspect-[.55] w-[180px] md:aspect-[.5] md:w-full ' +
 						reverseContainer
 					}
 				>
-					<div
+					<Link
+						href={link.url}
 						className={
 							'flex items-center justify-center gap-1 px-2 text-center text-sm font-semibold uppercase text-white md:gap-2 md:text-xl lg:gap-4 lg:text-2xl ' +
 							reverseLink
@@ -42,9 +45,10 @@ const ImageButton = ({ image, link, reverse, ...rest }: any) => {
 								fill="#fff"
 							/>
 						</svg>
-					</div>
+					</Link>
 					{image?.url && (
-						<div
+						<Link
+							href={link.url}
 							className={
 								'relative w-full flex-1  overflow-hidden ' +
 								reverseImage
@@ -56,9 +60,9 @@ const ImageButton = ({ image, link, reverse, ...rest }: any) => {
 								fill
 								className="object-cover"
 							/>
-						</div>
+						</Link>
 					)}
-				</Link>
+				</motion.div>
 			)}
 		</>
 	);

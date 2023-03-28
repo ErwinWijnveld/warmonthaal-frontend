@@ -1,12 +1,10 @@
-import { usePage } from '@/hooks/usePage';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 
 const Meta = (props: any) => {
 	const { description, title } = props;
 	return (
 		<Head>
-			<title>{title} | Foodhall Arnhem</title>
+			<title>{title + ' | Foodhall Arnhem'}</title>
 			{description ? (
 				<meta name="description" content={description} />
 			) : null}

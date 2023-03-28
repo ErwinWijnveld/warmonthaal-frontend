@@ -1,7 +1,7 @@
 import DefaultImage, { ImageProps } from 'next/image';
 type NewImageProps = ImageProps & {
 	[key: string]: any;
-	src: string;
+	src: any;
 };
 
 const Image = ({ ...rest }: NewImageProps) => {

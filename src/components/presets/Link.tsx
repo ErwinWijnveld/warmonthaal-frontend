@@ -8,7 +8,7 @@ type NewLinkProps = LinkProps & {
 // set scroll to false to prevent scroll to top on page change (when pagetransition is used)
 const Link = ({ children, ...rest }: NewLinkProps) => {
 	return (
-		<DefaultLink {...rest} scroll={rest.scroll || true}>
+		<DefaultLink {...rest} scroll={rest.scroll || false}>
 			{children}
 		</DefaultLink>
 	);

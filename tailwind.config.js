@@ -58,6 +58,9 @@ module.exports = {
       fontSize: {
         '2xs': '.625rem',
       },
+      width: {
+        'half-padding': 'calc(50% - 3rem)',
+      }
     },
   },
   plugins: [globalStyles],
