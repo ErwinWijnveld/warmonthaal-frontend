@@ -62,7 +62,12 @@ module.exports = {
       },
       width: {
         'half-padding': 'calc(50% - 3rem)',
-      }
+      },
+      // easing
+      transitionTimingFunction: {
+        // cubic-bezier(.4,0,.2,1)
+        'scaletrans': 'cubic-bezier(0.4, 0, 0.2, 1)',
+      },
     },
   },
   plugins: [globalStyles],

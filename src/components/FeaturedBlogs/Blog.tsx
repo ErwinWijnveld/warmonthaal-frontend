@@ -14,15 +14,15 @@ const Blog = ({ image, slug, title, created_at, date, excerpt }: BlogProps) => {
 	return (
 		<Link className="block" href={`/nieuwtjes/${slug}`}>
 			<motion.div
-				className="overflow-hidden rounded-xl bg-ligter-sand shadow-lg"
+				className="group overflow-hidden rounded-xl bg-ligter-sand shadow-lg"
 				variants={OPACITY_TOP}
 			>
 				{image && (
-					<div className="relative h-[200px]">
+					<div className="relative h-[200px] overflow-hidden">
 						<Image
 							src={image || '/images/placeholder.jpg'}
 							alt={title}
-							className=" object-cover"
+							className=" object-cover transition-transform duration-500 ease-scaletrans group-hover:scale-110"
 							fill
 						/>
 					</div>

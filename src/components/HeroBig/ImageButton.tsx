@@ -19,7 +19,7 @@ const ImageButton = ({ image, link, reverse, ...rest }: any) => {
 					variants={OPACITY}
 					{...rest}
 					className={
-						'flex aspect-[.55] w-[180px] md:aspect-[.5] md:w-full ' +
+						'group flex aspect-[.55] w-[180px] md:aspect-[.5] md:w-full ' +
 						reverseContainer
 					}
 				>
@@ -58,7 +58,7 @@ const ImageButton = ({ image, link, reverse, ...rest }: any) => {
 								src={image.url}
 								alt={image?.alt}
 								fill
-								className="object-cover"
+								className="object-cover transition-transform duration-500 ease-scaletrans group-hover:scale-110"
 							/>
 						</Link>
 					)}

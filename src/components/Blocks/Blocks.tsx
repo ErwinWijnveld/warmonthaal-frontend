@@ -2,6 +2,7 @@ import FeaturedBlogs from '../FeaturedBlogs/FeaturedBlogs';
 import FeaturedReviews from '../FeaturedReviews/FeaturedReviews';
 import HeroBig from '../HeroBig/HeroBig';
 import HeroMedium from '../HeroMedium/HeroMedium';
+import StickyImageText from '../StickyImageText/StickyImageText';
 import TextImage from '../TextImage/TextImage';
 import TextUsps from '../TextUsps/TextUsps';
 
@@ -32,6 +33,10 @@ const Blocks = ({ blocks }: any) => {
 
 			case 'featured-reviews':
 				blocksArray.push(<FeaturedReviews key={index} {...block} />);
+				break;
+
+			case 'sticky-image-text':
+				blocksArray.push(<StickyImageText key={index} {...block} />);
 				break;
 
 			default:
