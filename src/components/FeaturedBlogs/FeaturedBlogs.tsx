@@ -4,25 +4,13 @@ import { OPACITY, OPACITY_LEFT, STAGGER_CHILDREN } from '@/lib/animations';
 import { motion } from 'framer-motion';
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import TopLeftBlue from '../dots/TopLeftBlue';
 import Blog from './Blog';
 
 const FeaturedBlogs = ({ content }: BlockProps) => {
 	return (
-		<section className="relative overflow-hidden py-32">
-			{/* blue dots */}
-			<motion.div
-				variants={OPACITY}
-				className="absolute top-32 -left-[35px] aspect-square w-[95px] scale-50 rounded-full bg-dark-blue md:top-[25%] md:scale-100"
-			/>
-			<motion.div
-				variants={OPACITY}
-				className="absolute top-20 left-[10%] aspect-square w-[38px] scale-50 rounded-full bg-light-blue md:top-[12%] md:scale-100"
-			/>
-			{/* sand circle */}
-			<motion.div
-				variants={OPACITY}
-				className="absolute right-0 top-40 -z-10 aspect-square w-[470px] translate-x-1/2 rounded-full bg-light-sand"
-			/>
+		<section className="relative overflow-hidden py-12 md:py-32">
+			<TopLeftBlue />
 			<motion.div variants={STAGGER_CHILDREN} className="container">
 				{content?.text && (
 					<motion.div

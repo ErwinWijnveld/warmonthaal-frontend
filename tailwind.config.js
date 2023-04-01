@@ -51,6 +51,8 @@ module.exports = {
         'main-sand': '#F1D7BD',
         'light-sand': '#FCF1E7',
         'ligter-sand': '#FFFCF7',
+        'dark-grey': '#B1B1B1',
+
       },
       lineHeight: {
         heading: 1.2,

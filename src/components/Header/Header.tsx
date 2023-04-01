@@ -7,7 +7,7 @@ import Link from '../presets/Link';
 const Header = () => {
 	return (
 		<motion.nav
-			className="absolute inset-x-0 top-0 py-8"
+			className="absolute inset-x-0 top-0 z-50 py-8"
 			variants={STAGGER_CHILDREN}
 		>
 			<div className="container">

@@ -115,6 +115,29 @@ export const OPACITY = {
     },
 };
 
+export const OPACITY_SCALE = {
+    initial: {
+        opacity: 0,
+        scale: 0,
+    },
+    animate: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            duration: 0.5,
+            ease: [0.97, 0.01, 0.36, 0.99],
+        },
+    },
+    exit: {
+        opacity: 0,
+        scale: 0,
+        transition: {
+            duration: 0.5,
+            ease: [0.97, 0.01, 0.36, 0.99],
+        },
+    },
+};
+
 export const STAGGER_CHILDREN = {
     animate: {
         transition: {

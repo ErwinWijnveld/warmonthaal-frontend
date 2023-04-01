@@ -15,7 +15,7 @@ const ImageButton = ({ image, link, reverse, ...rest }: any) => {
 	return (
 		<>
 			{link?.url && (
-				<motion.div
+				<div
 					variants={OPACITY}
 					{...rest}
 					className={
@@ -62,7 +62,7 @@ const ImageButton = ({ image, link, reverse, ...rest }: any) => {
 							/>
 						</Link>
 					)}
-				</motion.div>
+				</div>
 			)}
 		</>
 	);

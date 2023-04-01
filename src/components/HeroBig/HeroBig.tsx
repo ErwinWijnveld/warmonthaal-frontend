@@ -1,24 +1,31 @@
 import { BlockProps } from '@/@types/blocks';
-import { OPACITY, OPACITY_TOP } from '@/lib/animations';
+import {
+	OPACITY,
+	OPACITY_BOTTOM,
+	OPACITY_LEFT,
+	OPACITY_TOP,
+	STAGGER_CHILDREN,
+} from '@/lib/animations';
 import { COLORS } from '@/lib/consts';
 import { motion } from 'framer-motion';
 import Button from '../buttons/Button';
+import TopLeftBlue from '../dots/TopLeftBlue';
 import ImageButton from './ImageButton';
 import ScrollDown from './ScrollDown';
 
 const HeroBig = ({ content, medias }: BlockProps) => {
 	return (
-		<section className="realtive mb-0 md:mb-32">
-			<motion.div
-				variants={OPACITY}
-				className="absolute top-32 -left-[35px] aspect-square w-[95px] scale-50 rounded-full bg-dark-blue md:top-[25%] md:scale-100"
-			/>
-			<motion.div
-				variants={OPACITY}
-				className="absolute top-20 left-[10%] aspect-square w-[38px] scale-50 rounded-full bg-light-blue md:top-[12%] md:scale-100"
-			/>
+		<motion.section
+			variants={STAGGER_CHILDREN}
+			className="realtive mb-0 md:mb-32"
+		>
+			<TopLeftBlue />
+
 			<div className="relative mx-auto flex max-w-[1384px] flex-wrap-reverse justify-between px-4 md:h-screen md:max-h-[820px] md:min-h-[680px] md:flex-nowrap lg:px-12">
-				<div className="flex w-full shrink-0 items-end md:w-[30%] lg:w-[27%]">
+				<motion.div
+					variants={OPACITY_BOTTOM}
+					className="flex w-full shrink-0 items-end md:w-[30%] lg:w-[27%]"
+				>
 					{medias?.img && (
 						<ImageButton
 							image={medias?.img[0]}
@@ -32,10 +39,10 @@ const HeroBig = ({ content, medias }: BlockProps) => {
 							reverse
 						/>
 					)}
-				</div>
+				</motion.div>
 				{content?.text && (
 					<motion.div
-						variants={OPACITY_TOP}
+						variants={OPACITY}
 						className="flex w-full flex-col items-center justify-center py-12 md:w-4/12 md:py-0"
 					>
 						<div
@@ -54,7 +61,10 @@ const HeroBig = ({ content, medias }: BlockProps) => {
 						)}
 					</motion.div>
 				)}
-				<div className="flex w-full shrink-0 justify-end md:block md:w-[30%] lg:w-[27%]">
+				<motion.div
+					variants={OPACITY_TOP}
+					className="flex w-full shrink-0 justify-end md:block md:w-[30%] lg:w-[27%]"
+				>
 					{medias?.img_1 && (
 						<ImageButton
 							image={medias?.img_1[0]}
@@ -67,11 +77,11 @@ const HeroBig = ({ content, medias }: BlockProps) => {
 							}}
 						/>
 					)}
-				</div>
+				</motion.div>
 				<ScrollDown href="#hero-big--bottom" />
 			</div>
 			<div id="hero-big--bottom" />
-		</section>
+		</motion.section>
 	);
 };
 export default HeroBig;
