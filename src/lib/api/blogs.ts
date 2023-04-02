@@ -6,7 +6,6 @@ export const getBlogSlugs = async () => {
     const data = await axios.get(url)
         .then((res:any) => res.data)
         .catch((err:any) => {
-            console.log(err) 
             return err
         })
 
