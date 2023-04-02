@@ -12,13 +12,13 @@ import { useState } from 'react';
 const Page = ({ page }: { page: BlogProps }) => {
 	const [data, setData] = useState(page);
 
-	const date = data?.date ? new Date(data?.date) : null;
+	const date = data?.date ? new Date(data?.date) : (null as any);
 	// format to 12-01-2023
 	const formattedDate = data?.date
-		? `${('0' + date.getDate()).slice(-2)}-${(
+		? `${('0' + date?.getDate()).slice(-2)}-${(
 				'0' +
-				(date.getMonth() + 1)
-		  ).slice(-2)}-${date.getFullYear()}`
+				(date?.getMonth() + 1)
+		  ).slice(-2)}-${date?.getFullYear()}`
 		: null;
 
 	return (
@@ -45,8 +45,7 @@ const Page = ({ page }: { page: BlogProps }) => {
 						>
 							{data?.author && data?.date && (
 								<p className="mb-2 text-light-blue">
-									{data.author} -{' '}
-									{formattedDate ? formattedDate : ''}
+									{data.author} - {formattedDate}
 								</p>
 							)}
 							{data?.title && (
