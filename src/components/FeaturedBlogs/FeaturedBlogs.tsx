@@ -2,7 +2,6 @@ import { BlockProps } from '@/@types/blocks';
 import { BlogProps } from '@/@types/blog';
 import { OPACITY, OPACITY_LEFT, STAGGER_CHILDREN } from '@/lib/animations';
 import { motion } from 'framer-motion';
-import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import TopLeftBlue from '../dots/TopLeftBlue';
 import Blog from './Blog';

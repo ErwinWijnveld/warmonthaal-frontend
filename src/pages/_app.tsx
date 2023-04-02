@@ -1,4 +1,6 @@
 import '@/assets/styles/globals.scss';
+import 'swiper/css';
+
 import PageTransition from '@/components/PageTransition';
 import type { AppProps } from 'next/app';
 
