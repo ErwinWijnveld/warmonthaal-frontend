@@ -1,63 +1,109 @@
+import Image from '../presets/Image';
 import Link from '../presets/Link';
 
 export default function Footer({ menus }: any) {
 	const footerMenu =
-		menus?.find((item: any) => item?.slug === 'footer') || null;
+		menus?.find((item: any) => item?.title === 'Footer') || null;
 
 	if (!footerMenu) return null;
 
 	const footerBlock = footerMenu?.blocks[0];
 
-	const { content, children } = footerBlock;
+	const { content, children, medias } = footerBlock;
 
-	console.log(footerBlock);
+	const menuItems = children?.['menu-item'];
+	const contactItems = children?.['contact-item'];
 
 	return (
-		<section className="border-t-2">
-			<div className="container flex flex-wrap gap-10 py-20 sm:flex-nowrap sm:gap-[18px] [&_h5]:mb-0 [&_a]:block [&_a]:text-lg">
-				<div className="w-full sm:w-3/12">
-					<h5>{content?.title_1}</h5>
-					{children?.link_left?.map((item: any, i: number) => (
-						<Link href={item?.content?.link_url} key={i}>
-							{item?.content?.link_text}
-						</Link>
-					))}
-				</div>
-				<div className="w-full sm:w-3/12">
-					<h5>{content?.title_2}</h5>
-					{children?.link_middle?.map((item: any, i: number) => (
-						<Link href={item?.content?.link_url} key={i}>
-							{item?.content?.link_text}
-						</Link>
-					))}
-				</div>
-				<div className="w-full sm:w-4/12">
-					<h5>{content?.title_3}</h5>
+		<footer className="footer pt-12 lg:pb-12">
+			<div className="container mx-auto flex max-w-[1600px] flex-col items-center px-4 font-medium text-medium-blue lg:flex-row lg:gap-20">
+				{medias?.img && (
+					<div className="relative -ml-8 min-h-[200px] w-full shrink-0 overflow-hidden rounded-r-full lg:-ml-[170px] lg:w-[calc(40%_+_170px)] lg:self-stretch lg:rounded-full">
+						<Image
+							src={medias?.img[0]?.url}
+							alt={medias?.img[0]?.alt}
+							fill
+							className="object-cover"
+						/>
+					</div>
+				)}
+				<div className="grid w-full flex-1 grid-cols-2 gap-x-12 gap-y-4 py-8 lg:w-auto lg:max-w-[664px]">
+					<div className="col-span-2 xl:col-span-1">
+						<p className="mb-0 text-sm font-medium uppercase">
+							{content?.phone_title}
+						</p>
+						<a
+							className="mb-8 block text-4xl font-semibold"
+							href={`tel:${content?.phone_number}`}
+						>
+							{content?.phone_number}
+						</a>
+
+						{content?.text && (
+							<div
+								className="text-sm"
+								dangerouslySetInnerHTML={{
+									__html: content?.text,
+								}}
+							/>
+						)}
+					</div>
+					<div className="col-span-2 xl:col-span-1">
+						<ul className="headerlist p-0">
+							<p className="mb-4 text-sm uppercase">
+								{content?.navigation_title}
+							</p>
+							{menuItems?.map((item: any, i: number) => {
+								const { content } = item;
+								return (
+									<li key={i}>
+										<Link
+											className="mb-2 block text-xs uppercase"
+											href={content?.link_url}
+										>
+											{content?.link_title}
+										</Link>
+									</li>
+								);
+							})}
+						</ul>
+					</div>
+					<div className="col-span-2 h-px bg-light-grey" />
+					{contactItems?.map((item: any, i: number) => {
+						const { content, medias } = item;
+						return (
+							<div
+								key={i}
+								className="col-span-2 flex items-center gap-2 xl:col-span-1"
+							>
+								{medias?.img && (
+									<div className="relative aspect-square h-5 shrink-0">
+										<Image
+											src={medias?.img[0]?.url}
+											alt={medias?.img[0]?.alt}
+											fill
+											className="object-contain"
+										/>
+									</div>
+								)}
+								<p
+									className="mb-0 text-sm"
+									dangerouslySetInnerHTML={{
+										__html: content?.title,
+									}}
+								/>
+							</div>
+						);
+					})}
+					<div className="col-span-2 h-px bg-light-grey" />
 					<div
-						className="[&_p]:text-lg"
+						className="col-span-2 text-xs text-light-grey [&_p]:mb-0"
 						dangerouslySetInnerHTML={{
-							__html: content?.text || '',
+							__html: content?.footer_text || '',
 						}}
 					/>
-					{/* <h6>
-						Dinsdag t/m Donderdag en Zondag
-						<br />
-						12:00 - 22:00
-						<br />
-						Vrijdag en Zaterdag
-						<br />
-						12:00 - 23:00
-					</h6> */}
-				</div>
-				<div className="w-full sm:w-2/12">
-					<h5>{content?.title_4}</h5>
-					{children?.link_right?.map((item: any, i: number) => (
-						<Link href={item?.content?.link_url} key={i}>
-							{item?.content?.link_text}
-						</Link>
-					))}
 				</div>
 			</div>
-		</section>
+		</footer>
 	);
 }

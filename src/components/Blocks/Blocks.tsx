@@ -1,3 +1,4 @@
+import Contact from '../Contact/Contact';
 import FeaturedBlogs from '../FeaturedBlogs/FeaturedBlogs';
 import FeaturedReviews from '../FeaturedReviews/FeaturedReviews';
 import HeroBig from '../HeroBig/HeroBig';
@@ -37,6 +38,10 @@ const Blocks = ({ blocks }: any) => {
 
 			case 'sticky-image-text':
 				blocksArray.push(<StickyImageText key={index} {...block} />);
+				break;
+
+			case 'contact':
+				blocksArray.push(<Contact key={index} {...block} />);
 				break;
 
 			default:

@@ -52,7 +52,7 @@ module.exports = {
         'light-sand': '#FCF1E7',
         'ligter-sand': '#FFFCF7',
         'dark-grey': '#B1B1B1',
-
+        'light-grey': '#D3D3D3',
       },
       lineHeight: {
         heading: 1.2,
@@ -67,6 +67,11 @@ module.exports = {
       transitionTimingFunction: {
         // cubic-bezier(.4,0,.2,1)
         'scaletrans': 'cubic-bezier(0.4, 0, 0.2, 1)',
+      },
+      borderRadius: {
+        'huge': '147px',
+        'med': '70px',
+        'sma': '45px',
       },
     },
   },

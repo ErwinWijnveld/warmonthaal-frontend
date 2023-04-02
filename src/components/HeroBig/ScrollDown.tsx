@@ -35,7 +35,7 @@ const ScrollDown = ({ ...rest }: any) => {
 						transform="translate(703 741)"
 						fill="none"
 						stroke="#628196"
-						stroke-width="3"
+						strokeWidth="3"
 					>
 						<rect width="29" height="51" rx="14.5" stroke="none" />
 						<rect

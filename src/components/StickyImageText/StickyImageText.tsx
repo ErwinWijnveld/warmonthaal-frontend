@@ -93,7 +93,7 @@ const StickyImageText = ({ children }: BlockProps) => {
 	return (
 		<section>
 			<motion.div variants={OPACITY} className="container">
-				<div className="slider relative h-[557px]">
+				<div className="slider relative h-[460px] md:h-[557px]">
 					{children?.['image-text']?.map(
 						(item: any, index: number) => (
 							<ImageText

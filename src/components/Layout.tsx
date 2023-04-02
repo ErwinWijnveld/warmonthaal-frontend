@@ -17,7 +17,7 @@ const Layout = ({ children, ...rest }: LayoutProps) => {
 	return (
 		<PageContextProvider value={rest}>
 			<Meta {...rest?.meta} />
-			<Header />
+			<Header menus={rest?.menus} />
 			<main className="min-h-screen">{children}</main>
 			<Footer menus={rest?.menus} />
 		</PageContextProvider>

@@ -9,7 +9,7 @@ const TextImage = ({ content, medias }: BlockProps) => {
 	const imageLeft = content?.image_position === 'left';
 
 	return (
-		<section className="relative flex items-center overflow-x-clip pt-[350px] pb-10 md:min-h-[526px] md:pb-32 md:pt-32	">
+		<section className="relative mt-12 flex items-center overflow-x-clip pt-[350px] pb-10 md:mt-0 md:min-h-[526px] md:pb-32 md:pt-32	">
 			<div
 				className={`container flex items-center ${
 					imageLeft ? 'md:flex-row-reverse' : ''
@@ -45,7 +45,7 @@ const TextImage = ({ content, medias }: BlockProps) => {
 						}
 					>
 						{!imageLeft && (
-							<BeigeLightBlue className="absolute bottom-[calc(100%_-_1rem)] -right-6 z-10 origin-bottom-right scale-50 md:bottom-[calc(100%_-_3rem)] md:scale-100" />
+							<BeigeLightBlue className="absolute bottom-[calc(100%_-_1rem)] -right-6 z-10 origin-bottom-right !scale-50 md:bottom-[calc(100%_-_3rem)] md:scale-100" />
 						)}
 						<Image
 							src={medias?.img[0]?.url}

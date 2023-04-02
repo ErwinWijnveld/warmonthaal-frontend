@@ -20,7 +20,7 @@ const HeroMedium = ({ content, medias }: BlockProps) => {
 		>
 			<BeigeMediumBlue className="absolute top-[21%] -left-8 origin-left scale-[.6] md:scale-100" />
 
-			<div className="container relative mx-auto flex h-full flex-wrap-reverse justify-between px-4 md:max-h-[820px]">
+			<div className="container relative z-10 mx-auto flex h-full flex-wrap-reverse justify-between px-4 md:max-h-[820px]">
 				{content?.text && (
 					<motion.div
 						variants={OPACITY_LEFT}

@@ -34,11 +34,13 @@ const FeaturedBlogs = ({ content }: BlockProps) => {
 						},
 					}}
 				>
-					{content?.browsers?.blogs?.map((blog: BlogProps) => (
-						<SwiperSlide>
-							<Blog {...blog} />
-						</SwiperSlide>
-					))}
+					{content?.browsers?.blogs?.map(
+						(blog: BlogProps, i: number) => (
+							<SwiperSlide key={i}>
+								<Blog {...blog} />
+							</SwiperSlide>
+						)
+					)}
 				</Swiper>
 			</motion.div>
 		</section>

@@ -3,13 +3,13 @@ import { OPACITY_BOTTOM } from '@/lib/animations';
 import { motion } from 'framer-motion';
 import Image from '../presets/Image';
 
-const Usp = ({ content, files }: BlockProps) => {
+const Usp = ({ content, medias }: BlockProps) => {
 	return (
 		<motion.div variants={OPACITY_BOTTOM}>
 			<div className="mb-2 flex aspect-square w-[45px] items-center justify-center rounded-full bg-lighter-blue p-3 md:w-[70px]">
 				<Image
 					className="object-contain"
-					src={files?.icon[0].url}
+					src={medias?.img[0].url}
 					alt="Icoontje"
 					width="28"
 					height="28"

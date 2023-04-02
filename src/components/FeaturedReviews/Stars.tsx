@@ -9,6 +9,7 @@ const Stars = ({ amount }: any) => {
 							width="13.884"
 							height="13.289"
 							viewBox="0 0 13.884 13.289"
+							key={i}
 						>
 							<path
 								id="Icon_awesome-star"
@@ -26,6 +27,7 @@ const Stars = ({ amount }: any) => {
 						width="13.884"
 						height="13.289"
 						viewBox="0 0 13.884 13.289"
+						key={i}
 					>
 						<path
 							id="Icon_awesome-star"

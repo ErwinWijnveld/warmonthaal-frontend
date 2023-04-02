@@ -7,10 +7,10 @@ const ImageText = ({ content, medias, i, length }: BlockProps & any) => {
 			style={{
 				zIndex: '-' + i,
 			}}
-			className="imagetextslide absolute inset-0 flex h-full items-center gap-10"
+			className="imagetextslide absolute inset-0 flex h-full flex-col items-center gap-4 md:flex-row md:gap-10"
 		>
 			{medias?.img && (
-				<div className="relative aspect-[.5] h-full shrink-0 overflow-hidden rounded-full">
+				<div className="relative aspect-[2] w-full shrink-0 overflow-hidden rounded-full md:aspect-[.5] md:h-full md:w-auto">
 					<Image
 						fill
 						src={medias?.img[0].url}
@@ -19,25 +19,25 @@ const ImageText = ({ content, medias, i, length }: BlockProps & any) => {
 					/>
 				</div>
 			)}
-			<div className="pagination flex shrink-0 flex-col items-center justify-center gap-2">
+			<div className="pagination flex shrink-0 items-center justify-center gap-2 md:flex-col">
 				{[...Array(length)]?.map((_, index) => (
 					<div
 						key={index}
-						className={`h-[41px] w-[6px] rounded-full ${
+						className={`h-[6px] w-8 rounded-full md:h-[41px] md:w-[6px] ${
 							i === index ? 'bg-medium-blue' : 'bg-light-sand'
 						}`}
 					/>
 				))}
 			</div>
-			<div className="content flex h-full flex-col justify-center">
+			<div className="content flex flex-col justify-center md:h-full">
 				{content?.title && (
-					<h3 className="max-w-max border-b-2 border-main-sand pb-2 text-2xl font-bold text-dark-blue md:pr-20">
+					<h3 className="max-w-max border-b-2 border-main-sand pb-1 text-lg font-bold text-dark-blue md:pb-2 md:pr-20 md:text-2xl">
 						{content?.title}
 					</h3>
 				)}
 				{content?.text && (
 					<div
-						className="text-xl text-medium-blue"
+						className="text-sm text-medium-blue md:text-base lg:text-xl"
 						dangerouslySetInnerHTML={{ __html: content?.text }}
 					/>
 				)}

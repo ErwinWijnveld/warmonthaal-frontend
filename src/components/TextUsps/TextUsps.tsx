@@ -31,8 +31,8 @@ const TextUsps = ({ content, children }: BlockProps) => {
 					variants={STAGGER_CHILDREN}
 					className="grid w-full shrink-0 grid-cols-2 gap-3 md:gap-8 lg:w-1/2"
 				>
-					{children?.usp?.map((child: BlockProps) => (
-						<Usp {...child} />
+					{children?.usp?.map((child: BlockProps, i: number) => (
+						<Usp {...child} key={i} />
 					))}
 				</motion.div>
 			</div>
