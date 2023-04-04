@@ -4,7 +4,7 @@ const Meta = (props: any) => {
 	const { description, title } = props;
 	return (
 		<Head>
-			<title>{title + ' | Foodhall Arnhem'}</title>
+			<title>{title + ' | Warmonthaal'}</title>
 			{description ? (
 				<meta name="description" content={description} />
 			) : null}
