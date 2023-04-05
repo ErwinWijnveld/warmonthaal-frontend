@@ -43,25 +43,23 @@ const HeroMedium = ({ content, medias }: BlockProps) => {
 					</motion.div>
 				)}
 			</div>
-			<div className="absolute inset-0 mx-auto flex h-full w-full max-w-[1384px] justify-end px-4 lg:px-12">
-				<motion.div
-					variants={OPACITY_TOP}
-					className="flex w-full shrink-0 items-start justify-end md:block md:w-[30%] lg:w-[27%]"
-				>
-					{medias?.img_1 && (
-						<ImageButton
-							image={medias?.img_1[0]}
-							link={{
-								url: content?.link_2_url,
-								title: content?.link_2_text,
-							}}
-							style={{
-								backgroundColor: COLORS['medium-blue'],
-							}}
-						/>
-					)}
-				</motion.div>
-			</div>
+			<motion.div
+				variants={OPACITY_TOP}
+				className="absolute right-4 top-0 z-10 flex w-full shrink-0 items-start justify-end md:block md:w-[30%] xl:right-24 xl:w-[320px] xxl:right-auto xxl:left-[calc(50%_+_300px)]"
+			>
+				{medias?.img_1 && (
+					<ImageButton
+						image={medias?.img_1[0]}
+						link={{
+							url: content?.link_2_url,
+							title: content?.link_2_text,
+						}}
+						style={{
+							backgroundColor: COLORS['medium-blue'],
+						}}
+					/>
+				)}
+			</motion.div>
 			<div id="content" />
 		</motion.section>
 	);

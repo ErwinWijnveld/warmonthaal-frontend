@@ -77,13 +77,13 @@ const Header = ({ menus }: any) => {
 
 					{/* mobile menu trigger */}
 					<motion.div
-						className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-main-sand text-white drop-shadow-md md:hidden"
+						className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-main-sand text-white drop-shadow-md md:hidden"
 						variants={OPACITY_RIGHT}
 						onClick={() => setMobileMenu((prev) => !prev)}
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							className="h-4 w-4"
+							className="h-6 w-6"
 							viewBox="0 0 20 20"
 							fill="currentColor"
 						>

@@ -1,4 +1,5 @@
 import { PageContextProvider } from '@/hooks/usePage';
+import Custom404 from '@/pages/404';
 import Error from 'next/error';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
@@ -12,7 +13,7 @@ type LayoutProps = {
 };
 
 const Layout = ({ children, ...rest }: LayoutProps) => {
-	if (!rest?.slug) return <Error statusCode={404} />;
+	if (!rest?.slug) return <Custom404 />;
 
 	return (
 		<PageContextProvider value={rest}>

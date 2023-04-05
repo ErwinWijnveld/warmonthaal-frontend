@@ -43,6 +43,9 @@ module.exports = {
           xl: '1190px',
         },
       },
+      screens: {
+        'xxl': '1660px',
+      },
       colors: {
         'dark-blue': '#284455',
         'medium-blue': '#3E6072',
