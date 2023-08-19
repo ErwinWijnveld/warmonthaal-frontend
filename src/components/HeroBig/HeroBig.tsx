@@ -45,6 +45,9 @@ const HeroBig = ({ content, medias }: BlockProps) => {
 						variants={OPACITY}
 						className="flex w-full flex-col items-center justify-center py-12 md:w-4/12 md:py-0"
 					>
+						<p className="mb-6 rounded-full bg-light-sand py-1 px-6 text-sm font-semibold text-medium-blue">
+							Welkom bij Warm Onthaal!
+						</p>
 						<div
 							className="mb-2 text-center lg:mb-4 [&>h1]:mb-6 [&>h1]:text-3xl md:[&>h1]:text-4xl lg:[&>h1]:text-5xl [&>p]:text-sm lg:[&>p]:text-base "
 							dangerouslySetInnerHTML={{
@@ -53,7 +56,7 @@ const HeroBig = ({ content, medias }: BlockProps) => {
 						/>
 						{content?.link_center_url && (
 							<Button
-								className="bg-main-sand text-white"
+								className="bg-dark-blue text-white"
 								href={content?.link_center_url}
 							>
 								{content?.link_center_text}
@@ -78,7 +81,7 @@ const HeroBig = ({ content, medias }: BlockProps) => {
 						/>
 					)}
 				</motion.div>
-				<ScrollDown href="#hero-big--bottom" />
+				<ScrollDown />
 			</div>
 			<div id="hero-big--bottom" />
 		</motion.section>

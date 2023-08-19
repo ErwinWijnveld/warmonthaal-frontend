@@ -3,7 +3,13 @@ import { motion } from 'framer-motion';
 import Image from '../presets/Image';
 import Link from '../presets/Link';
 
-const ImageButton = ({ image, link, reverse, ...rest }: any) => {
+const ImageButton = ({
+	image,
+	link,
+	reverse,
+	as: Component = Link,
+	...rest
+}: any) => {
 	const reverseContainer = reverse
 		? 'flex-col rounded-full md:translate-y-[25%]'
 		: 'flex-col-reverse md:-translate-y-[10%] rounded-b-full -mt-20 md:mt-0';
@@ -23,10 +29,10 @@ const ImageButton = ({ image, link, reverse, ...rest }: any) => {
 						reverseContainer
 					}
 				>
-					<Link
+					<Component
 						href={link.url}
 						className={
-							'flex items-center justify-center gap-1 px-2 text-center text-sm font-semibold uppercase text-white md:gap-2 md:text-xl lg:gap-4 lg:text-2xl ' +
+							'flex items-center justify-center gap-1 px-2 text-center text-sm font-semibold uppercase text-white underline hover:cursor-pointer md:gap-2 md:text-xl lg:gap-4 lg:text-2xl ' +
 							reverseLink
 						}
 					>
@@ -45,12 +51,12 @@ const ImageButton = ({ image, link, reverse, ...rest }: any) => {
 								fill="#fff"
 							/>
 						</svg>
-					</Link>
+					</Component>
 					{image?.url && (
-						<Link
+						<Component
 							href={link.url}
 							className={
-								'relative w-full flex-1  overflow-hidden ' +
+								'relative w-full flex-1 overflow-hidden  hover:cursor-pointer ' +
 								reverseImage
 							}
 						>
@@ -58,9 +64,9 @@ const ImageButton = ({ image, link, reverse, ...rest }: any) => {
 								src={image.url}
 								alt={image?.alt}
 								fill
-								className="object-cover transition-transform duration-500 ease-scaletrans group-hover:scale-110"
+								className="object-cover"
 							/>
-						</Link>
+						</Component>
 					)}
 				</div>
 			)}

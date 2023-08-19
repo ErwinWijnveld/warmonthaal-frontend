@@ -3,10 +3,16 @@ import { motion } from 'framer-motion';
 
 const ScrollDown = ({ ...rest }: any) => {
 	return (
-		<motion.a
+		<motion.div
 			variants={OPACITY}
 			{...rest}
-			className="absolute bottom-0 left-1/2 hidden -translate-x-1/2 translate-y-1/2 md:block"
+			onClick={() => {
+				window.scrollTo({
+					top: window.innerHeight,
+					behavior: 'smooth',
+				});
+			}}
+			className="absolute bottom-0 left-1/2 hidden -translate-x-1/2 translate-y-1/2 hover:cursor-pointer md:block"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +62,7 @@ const ScrollDown = ({ ...rest }: any) => {
 					/>
 				</g>
 			</svg>
-		</motion.a>
+		</motion.div>
 	);
 };
 export default ScrollDown;

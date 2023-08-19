@@ -54,8 +54,16 @@ const HeroMedium = ({ content, medias }: BlockProps) => {
 							url: content?.link_2_url,
 							title: content?.link_2_text,
 						}}
+						as="div"
 						style={{
 							backgroundColor: COLORS['medium-blue'],
+						}}
+						onClick={(e: any) => {
+							e.preventDefault();
+							window.scrollTo({
+								top: window.innerHeight,
+								behavior: 'smooth',
+							});
 						}}
 					/>
 				)}

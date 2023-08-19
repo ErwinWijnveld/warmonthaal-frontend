@@ -37,8 +37,9 @@ const Header = ({ menus }: any) => {
 							<Image
 								src={logo}
 								alt="Logo"
-								width={200}
-								height={50}
+								width={230}
+								height={57}
+								className="origin-left scale-110"
 							/>
 						</Link>
 					</motion.div>
