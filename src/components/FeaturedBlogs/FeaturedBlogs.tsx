@@ -23,7 +23,7 @@ const FeaturedBlogs = ({ content }: BlockProps) => {
 					spaceBetween={16}
 					breakpoints={{
 						0: {
-							slidesPerView: 1,
+							slidesPerView: 1.1,
 						},
 						768: {
 							slidesPerView: 2,

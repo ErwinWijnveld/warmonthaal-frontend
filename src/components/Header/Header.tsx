@@ -27,7 +27,7 @@ const Header = ({ menus }: any) => {
 				className="fixed inset-x-0 top-0 z-[100] overflow-hidden py-4 md:absolute md:py-8"
 				variants={STAGGER_CHILDREN}
 			>
-				<div className="container flex items-center justify-between gap-8 md:justify-start lg:gap-16">
+				<div className="container flex max-w-[1300px] items-center justify-between gap-8 md:justify-start lg:gap-16">
 					{/* desktop logo */}
 					<motion.div
 						className="hidden xl:block"
@@ -37,8 +37,8 @@ const Header = ({ menus }: any) => {
 							<Image
 								src={logo}
 								alt="Logo"
-								width={230}
-								height={57}
+								width={280}
+								height={67}
 								className="origin-left scale-110"
 							/>
 						</Link>
@@ -53,8 +53,8 @@ const Header = ({ menus }: any) => {
 							<Image
 								src={logoSmall}
 								alt="Logo"
-								width={60}
-								height={50}
+								width={70}
+								height={55}
 							/>
 						</Link>
 					</motion.div>

@@ -19,7 +19,10 @@ const TextImage = ({ content, medias }: BlockProps) => {
 					<BeigeLightBlue className="absolute top-[240px] -right-6 z-10 origin-bottom-right scale-50 md:top-auto md:bottom-3/4 md:scale-100" />
 				)}
 				{/* text */}
-				<motion.div variants={OPACITY_LEFT} className="w-full md:w-1/2">
+				<motion.div
+					variants={OPACITY_LEFT}
+					className="w-full md:w-1/2  [&_a]:text-medium-blue"
+				>
 					<div
 						dangerouslySetInnerHTML={{
 							__html: content?.text || '',

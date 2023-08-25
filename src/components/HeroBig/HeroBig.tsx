@@ -19,7 +19,7 @@ const HeroBig = ({ content, medias }: BlockProps) => {
 			variants={STAGGER_CHILDREN}
 			className="realtive mb-0 md:mb-32"
 		>
-			<TopLeftBlue />
+			{/* <TopLeftBlue /> */}
 
 			<div className="relative mx-auto flex max-w-[1384px] flex-wrap-reverse justify-between px-4 md:h-screen md:max-h-[820px] md:min-h-[680px] md:flex-nowrap lg:px-12">
 				<motion.div
@@ -43,7 +43,7 @@ const HeroBig = ({ content, medias }: BlockProps) => {
 				{content?.text && (
 					<motion.div
 						variants={OPACITY}
-						className="flex w-full flex-col items-center justify-center py-12 md:w-4/12 md:py-0"
+						className="flex w-full flex-col items-center justify-center py-12 md:w-[35%] md:py-0"
 					>
 						<p className="mb-6 rounded-full bg-light-sand py-1 px-6 text-sm font-semibold text-medium-blue">
 							Welkom bij Warm Onthaal!

@@ -77,3 +77,10 @@ p {
 .headerlist {
     list-style: none;
 }
+
+.line-clamp-1 {
+    overflow: hidden;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 1;
+}

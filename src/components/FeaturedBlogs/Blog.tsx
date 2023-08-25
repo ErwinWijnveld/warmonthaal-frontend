@@ -30,7 +30,9 @@ const Blog = ({ image, slug, title, created_at, date, excerpt }: BlogProps) => {
 				<div className="px-8 py-6 text-medium-blue">
 					{date && <p className="m-0 text-xs">{formattedDate}</p>}
 					{title && (
-						<h3 className="font-semibold lg:text-lg">{title}</h3>
+						<h3 className="line-clamp-1 text-lg font-semibold">
+							{title}
+						</h3>
 					)}
 					{excerpt && <p className="m-0 mb-2 text-sm">{excerpt}</p>}
 				</div>
