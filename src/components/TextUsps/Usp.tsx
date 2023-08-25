@@ -8,7 +8,7 @@ const Usp = ({ content, medias }: BlockProps) => {
 		<motion.div variants={OPACITY_BOTTOM}>
 			<div className="mb-2 flex aspect-square w-[45px] items-center justify-center rounded-full bg-lighter-blue p-3 md:w-[70px]">
 				<Image
-					className="object-contain"
+					className="max-h-[20px] object-contain md:max-h-[34px]"
 					src={medias?.img[0].url}
 					alt="Icoontje"
 					width="28"
