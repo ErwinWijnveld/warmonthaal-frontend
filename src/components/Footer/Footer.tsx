@@ -71,8 +71,11 @@ export default function Footer({ menus }: any) {
 					<div className="col-span-2 h-px bg-light-grey" />
 					{contactItems?.map((item: any, i: number) => {
 						const { content, medias } = item;
+
+						let link = i === 0 ? 'https://maps.app.goo.gl/JZo7RyjFzkar1aMC9' : ('mailto:' + content?.title);
 						return (
-							<div
+							<Link
+								href={link || ''}
 								key={i}
 								className="col-span-2 flex items-center gap-2 xl:col-span-1"
 							>
@@ -92,7 +95,7 @@ export default function Footer({ menus }: any) {
 										__html: content?.title,
 									}}
 								/>
-							</div>
+							</Link>
 						);
 					})}
 					<div className="col-span-2 h-px bg-light-grey" />

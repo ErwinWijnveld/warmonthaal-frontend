@@ -21,7 +21,7 @@ const TextImage = ({ content, medias }: BlockProps) => {
 				{/* text */}
 				<motion.div
 					variants={OPACITY_LEFT}
-					className="w-full md:w-1/2  [&_a]:text-medium-blue"
+					className="w-full md:w-1/2  [&_a]:text-medium-blue [&_a]:underline"
 				>
 					<div
 						dangerouslySetInnerHTML={{
