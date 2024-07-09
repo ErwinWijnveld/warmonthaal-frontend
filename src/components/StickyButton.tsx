@@ -23,7 +23,7 @@ const StickyButton = () => {
 		<>
 			<div
 				ref={buttonRef}
-				className="fixed right-0 bottom-24 z-50 w-max opacity-0 transition duration-500 scale-75 md:scale-100 origin-bottom-right"
+				className="fixed right-0 bottom-20 md:bottom-24 z-50 w-max opacity-0 transition duration-500 scale-75 md:scale-100 origin-bottom-right"
 			>
 				<Button
 					href="tel:+31683609670"
