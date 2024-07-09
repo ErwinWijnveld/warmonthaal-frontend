@@ -16,7 +16,7 @@ const StickyButton = () => {
 			if (buttonRefDos.current) {
 				buttonRefDos.current.style.opacity = '1';
 			}
-		}, 4000);
+		}, 500);
 	});
 
 	return (
