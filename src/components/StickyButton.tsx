@@ -23,7 +23,7 @@ const StickyButton = () => {
 		<>
 			<div
 				ref={buttonRef}
-				className="fixed right-0 bottom-20 z-50 w-max opacity-0 transition duration-500"
+				className="fixed right-0 bottom-24 z-50 w-max opacity-0 transition duration-500 scale-75 md:scale-100 origin-bottom-right"
 			>
 				<Button
 					href="tel:+31683609670"
@@ -39,17 +39,17 @@ const StickyButton = () => {
 			
 			<div
 				ref={buttonRefDos}
-				className="fixed right-0 bottom-8 z-50 w-max opacity-0 transition duration-500"
+				className="fixed right-0 bottom-4 z-50 w-max opacity-0 transition duration-500 scale-75 md:scale-100 origin-bottom-right "
 			>
 				<Button
 					href="/vacature-zorgmedewerker"
 					className="block rounded-r-none bg-medium-blue !px-10 !text-left !font-semibold text-white"
 				>
 					<span className="-mb-4 block !text-[10px] md:-mb-5 md:!text-xs">
-						Bekijk vacature
+						(Wij zoeken ook vrijwilligers)
 					</span>
 					<br />
-					Wij zoeken ook vrijwilligers
+					Bekijk vacature zorgmedewerker
 				</Button>
 			</div>
 		</>
