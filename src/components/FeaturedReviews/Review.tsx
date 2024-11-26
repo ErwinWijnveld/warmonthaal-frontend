@@ -18,11 +18,11 @@ const Review = ({ stars, title, content, author, date }: any) => {
 					dangerouslySetInnerHTML={{ __html: content }}
 				/>
 			)}
-			{author && (
+{/* 			{author && (
 				<p className="m-0 text-xs text-dark-grey">
 					{author} - {date}
 				</p>
-			)}
+			)} */}
 		</div>
 	);
 };
