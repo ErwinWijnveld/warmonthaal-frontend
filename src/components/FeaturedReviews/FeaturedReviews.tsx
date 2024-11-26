@@ -13,7 +13,7 @@ const FeaturedReviews = ({ content, extra_data }: BlockProps) => {
 				)}
 				<div className="mb-6 flex items-center gap-2">
 					<h3 className="m-0 font-semibold lg:text-[36px]">
-						{extra_data?.average}
+						{extra_data?.average.toFixed(1)}
 					</h3>
 					<div>
 						<Stars amount={extra_data?.average} />
