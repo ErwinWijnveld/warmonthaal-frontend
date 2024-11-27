@@ -37,9 +37,9 @@ const Header = ({ menus }: any) => {
 							<Image
 								src={logo}
 								alt="Logo"
-								width={280}
-								height={67}
-								className="origin-left scale-110"
+								width={240}
+								height={62}
+								className="origin-left scale-110 object-contain"
 							/>
 						</Link>
 					</motion.div>
@@ -60,7 +60,7 @@ const Header = ({ menus }: any) => {
 					</motion.div>
 
 					{/* menu items */}
-					<div className="hidden items-center gap-4 md:flex lg:gap-8">
+					<div className="hidden items-center gap-2 md:flex lg:gap-4">
 						{menuItems?.map((item: any, i: number) => {
 							const { content } = item;
 							return (
