@@ -3,7 +3,7 @@ import Stars from './Stars';
 
 const Review = ({ stars, title, content, author, date }: any) => {
 	return (
-		<div className="hidden first-of-type:block md:block">
+		<div className="block">
 			<div className="mb-2 flex flex-wrap items-center gap-4 md:flex-nowrap">
 				<Stars amount={stars} />
 				{title && (
