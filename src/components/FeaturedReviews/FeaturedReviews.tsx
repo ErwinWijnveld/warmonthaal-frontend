@@ -5,7 +5,7 @@ import Stars from './Stars';
 
 const FeaturedReviews = ({ content, extra_data }: BlockProps) => {
 	return (
-		<section className="relative py-12 md:py-36">
+		<section id="recensies" className="relative py-12 md:py-36">
 			<TopLeftBlue />
 			<div className="container">
 				{content?.text && (
