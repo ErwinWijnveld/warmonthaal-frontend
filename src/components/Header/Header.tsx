@@ -66,7 +66,7 @@ const Header = ({ menus }: any) => {
 							return (
 								<motion.div variants={OPACITY_RIGHT} key={i}>
 									<Link
-										className="block text-[10px] font-semibold uppercase lg:text-xs"
+										className="block text-[10px] font-semibold uppercase lg:text-xs hover:underline"
 										href={content?.link_url}
 									>
 										{content?.link_title}
