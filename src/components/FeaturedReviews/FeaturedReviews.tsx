@@ -4,6 +4,10 @@ import Review from './Review';
 import Stars from './Stars';
 
 const FeaturedReviews = ({ content, extra_data }: BlockProps) => {
+	  const average = Array.isArray(extra_data?.average) 
+    ? extra_data.average[0] 
+    : extra_data?.average;
+	
 	return (
 		<section id="recensies" className="relative py-12 md:py-36">
 			<TopLeftBlue />
